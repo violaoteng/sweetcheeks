@@ -1,0 +1,120 @@
+/* ---------- About section ---------- */
+.about-section {
+    padding: 3rem 2rem;
+    background: #fffaf6;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1 1 420px;
+    max-width: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2e241e;
+}
+
+.about-title {
+    font-size: 2.2rem;
+    color: #5c0430;
+    margin: 0 0 1rem;
+    position: relative;
+}
+
+.about-title::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #d98cae;
+    margin: 0.6rem 0 0;
+    border-radius: 10px;
+}
+
+.about-intro {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #5c0430;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0 0 1rem;
+}
+
+/* ---------- Values row ---------- */
+.about-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+.value-item {
+    flex: 1 1 160px;
+    background: #ffffff;
+    border: 1px solid #f0d6e0;
+    border-left: 4px solid #5c0430;
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 4px 12px rgba(92, 4, 48, 0.06);
+}
+
+.value-item h3 {
+    margin: 0 0 0.4rem;
+    color: #5c0430;
+    font-size: 1.05rem;
+}
+
+.value-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6b5a62;
+    line-height: 1.5;
+}
+
+/* ---------- Image ---------- */
+.about-image-wrap {
+    flex: 1 1 320px;
+    max-width: 480px;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(92, 4, 48, 0.15);
+    object-fit: cover;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: #8a7a6b;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+    .about-section {
+        padding: 2rem 1.2rem;
+    }
+    .about-title {
+        font-size: 1.7rem;
+    }
+    .about-container {
+        gap: 2rem;
+    }
+}

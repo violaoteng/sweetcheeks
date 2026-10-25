@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sweet Cheeks Restaurant</title>
+    <link rel="icon" type="image/png" href="static/images/favicon.png">
     <link rel="stylesheet" href="static/css/styles.css">
 </head>
 <body>
@@ -11,28 +12,38 @@
         Open daily from 9:00 AM to 10:00 PM. Enjoy our delicious dishes and exceptional service.
     </h4>      
     </marquee>
-    
+      
    <header id="header">
     <nav class="navbar">
-        <h2 class="logo">Sweet Cheeks Restaurant</h2>
-        <div class="nav-links">           
-            <a href="index.html"> Home </a>
-            <a href="menu.html"> Menu </a>
-            <a href=""> About </a>
-            <a href="contact.html"> Contact </a>
-            <a href=""> Reservation </a>
+
+        <h2 class="logo">
+            <a href="index.html" class="logo-link">
+                <img src="static/images/sweet-cheeks-logo.png"
+                     alt="Sweet Cheeks Logo"
+                     class="logo-img">
+                <span>Sweet Cheeks Restaurant</span>
+            </a>
+        </h2>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </div>
-    </nav>    
+
+    </nav>
    </header>
+
+      
    <!-- hero section  -->
     <div id="hero-container">
-        <img src="static/images/hero1.jpg" alt="Restaurant hero image" class="hero-image">
+        <img src="static/images/hero2.jpg" alt="Restaurant hero image" class="hero-image">
         <div class="hero-content" >            
             <h1>Welcome to Sweet Cheeks</h1>
             <p>Experience flavor in every bite. </p>                
-            <p>Experience the taste of our delicious dishes, crafted with love and passion. 
-            From traditional Kenyan cuisine to vegetarian options, we have something for everyone. 
-            Join us for a memorable dining experience!</p>
+            <h5>Experience the taste of our delicious dishes, crafted with love and passion. 
+            Join us for a memorable dining experience!</h5>
         </div>
     </div>
     <h2 class="dishes"> Our popular dishes</h2>
@@ -71,5 +82,43 @@
     </div>
 
    <button class="btn" type="button"><a href="menu.html"> Explore our Menu </a></button> 
+
+       <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <!-- Contact Info -->
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: info@sweetcheeks.com</p>
+                <p>Phone: +254 700 123 456</p>
+                <p>Location: Nairobi, Kenya</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Opening Hours -->
+            <div class="footer-column">
+                <h3>Opening Hours</h3>
+                <p>Mon – Fri: 9:00 AM – 10:00 PM</p>
+                <p>Sat – Sun: 10:00 AM – 11:00 PM</p>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sweet Cheeks Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

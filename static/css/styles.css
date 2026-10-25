@@ -1,4 +1,8 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #eed9d9;
@@ -22,52 +26,119 @@ body {
     gap: 10px;
 
 }
-.logo{
+
+.logo {
     font-size: 20px;
     margin: 0;
     white-space: nowrap;
     font-weight: bold;
-   
 }
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+    flex-shrink: 1;
+}
+
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 5px;                     
+    gap: 5px;
     flex-wrap: wrap;
 }
-.nav-links a{
-    color: #f8f8f8;   
+
+.nav-links a {
+    color: #f8f8f8;
     text-decoration: none;
-    padding: 10px 16px;          
-    border-radius: 4px;          
+    padding: 10px 16px;
+    border-radius: 4px;
     transition: background-color 0.3s ease;
     display: inline-block;
 }
-.nav-links a:hover{
+
+.nav-links a:hover {
     background-color: #210808;
 }
-.hero-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+
+/* ---------- Hero banner ---------- */
+#hero-container {
+    position: relative;
+    width: 100%;
+    height: 55vh;              
+    max-height: 520px;         
+    min-height: 320px;        
+    overflow: hidden;
+    margin-bottom: 2rem;
 }
 
 .hero-image {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* crops instead of stretching */
+    object-position: center;   /* keeps the focus centered */
+    display: block;
 }
 
 .hero-content {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;                
+    max-width: 700px;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
 }
 
+.hero-content h1 {
+    font-size: 2.4rem;
+    margin: 0 0 0.5rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin: 0.3rem 0;
+}
+
+/* ---------- Hero responsive ---------- */
+@media (max-width: 768px) {
+    #hero-container {
+        height: 45vh;
+        min-height: 260px;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero-container {
+        height: 40vh;
+        min-height: 220px;
+    }
+    .hero-content h1 {
+        font-size: 1.4rem;
+    }
+    .hero-content p {
+        font-size: 0.85rem;
+    }
+}
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -154,4 +225,80 @@ body {
     color: #f8f8f8;
     text-decoration: none;
     
+}
+
+.site-footer {
+    background-color: #5c0430;      
+    color: #f8f8f8;
+    padding: 40px 20px 20px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+/* ---------- Column styling ---------- */
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #d8d8d8;                 
+    font-weight: bold;
+}
+
+.footer-column p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #f8f8f8;              
+    opacity: 0.9;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #f8f8f8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #ffd9a0;                
+}
+
+/* ---------- Bottom copyright bar ---------- */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(248, 248, 248, 0.2);   /* subtle light divider */
+    font-size: 0.85rem;
+    color: #f8f8f8;
+    opacity: 0.75;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
 }
